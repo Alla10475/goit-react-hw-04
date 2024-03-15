@@ -16,7 +16,7 @@ const SearchBar = ({ onSubmit }) => {
   const handleSubmit = evt => {
     evt.preventDefault();
     if (!query.trim()) {
-      notify();
+      return notify();
     }
     onSubmit(query);
     setQuery('');
